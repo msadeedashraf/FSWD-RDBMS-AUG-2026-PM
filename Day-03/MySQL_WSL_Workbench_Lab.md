@@ -152,9 +152,12 @@ exit;
 
 ---
 
+
+
 # Part 6 — Install MySQL Workbench on Windows
 
 Download MySQL Workbench from the official MySQL Workbench download page.
+[Download from:](https://dev.mysql.com/downloads/workbench/)
 
 Install it using the default settings and launch **MySQL Workbench**.
 
