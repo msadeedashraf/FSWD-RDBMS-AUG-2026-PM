@@ -41,3 +41,5 @@ Thumbs.db
 # SQL Server database files
 *.mdf
 *.ldf
+
+airport-db.zip
