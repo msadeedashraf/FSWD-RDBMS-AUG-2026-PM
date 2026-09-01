@@ -1,8 +1,23 @@
 <?xml version="1.0"?>
-<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Demo">
+<SqlWorkbenchSqlProject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Demo">
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
-      <Items />
+      <Items>
+        <ConnectionNode Name="localhost\sqlexpress:SADEED\msade">
+          <Created>2026-08-31T19:11:02.4206558-04:00</Created>
+          <Type>SQL</Type>
+          <Server>localhost\sqlexpress</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>TSQL</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <TrustServerCertificate>True</TrustServerCertificate>
+          <EncryptionOption>True</EncryptionOption>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
@@ -13,8 +28,8 @@
           <FullPath>11 - Demonstration A.sql</FullPath>
         </FileNode>
         <FileNode Name="21 - Demonstration B.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost\sqlexpress:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost\sqlexpress</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>21 - Demonstration B.sql</FullPath>
         </FileNode>

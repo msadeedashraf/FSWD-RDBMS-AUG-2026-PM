@@ -8,7 +8,9 @@
 -- Step 2: Simple CASE Expression
 -- Select and execute the following query to show the use of a simple CASE expression
 -- to convert values in a flag-type column to a label.
-SELECT ProductNumber, Name, ListPrice,
+select * from SalesLT.Product;
+
+SELECT ProductNumber, Name, ListPrice,size, 
 	CASE Size
 		WHEN 'S' THEN 'Small'
 		WHEN 'M' THEN 'Medium'
@@ -31,4 +33,13 @@ SELECT ProductNumber, Name,
 		ELSE 'Bike Accessories'
 	END AS Category
 FROM SalesLT.Product;
+
+select * from SalesLT.ProductCategory
+
+---join
+SELECT 
+p.ProductNumber, p.Name , c.Name as Category
+	FROM SalesLT.Product as P join SalesLT.ProductCategory as  C
+	on p.ProductCategoryID = c.ProductCategoryID
+
 

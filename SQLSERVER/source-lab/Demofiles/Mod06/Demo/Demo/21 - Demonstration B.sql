@@ -40,10 +40,11 @@ FORMAT(@m,'C','de-de') AS de_de_currency;
 -- end FORMAT example
 
 SELECT SUBSTRING('Microsoft SQL Server',11,3) AS Result;
+
 SELECT LEFT('Microsoft SQL Server',9) AS left_example, RIGHT('Microsoft SQL Server',6) as right_example;
 
-SELECT LEN('Microsoft SQL Server     ') AS [LEN];
-SELECT DATALENGTH('Microsoft SQL Server     ') AS [DATALENGTH];
+SELECT LEN('       Microsoft SQL Server     ') AS [LEN];
+SELECT DATALENGTH('  Microsoft SQL Server     ') AS [DATALENGTH];
 
 SELECT CHARINDEX('SQL','Microsoft SQL Server') AS Result;
 
@@ -55,4 +56,26 @@ SELECT UPPER('Microsoft SQL Server') AS UP, LOWER('Microsoft SQL Server') AS LOW
 SELECT AddressID, CountryRegion
 FROM SalesLT.Address
 WHERE CountryRegion LIKE N'United%'
+
+select getdate() ---TSQL
+
+select sysdate from dual---oracle
+
+
+select 
+
+e.firstname + ' '+ e.lastname
+
+from hr.Employees as e
+
+select 
+
+concat(e.firstname ,  ' ', e.lastname )    
+
+from hr.Employees as e
+
+select 
+upper(e.firstname)
+
+from hr.Employees as e
 
