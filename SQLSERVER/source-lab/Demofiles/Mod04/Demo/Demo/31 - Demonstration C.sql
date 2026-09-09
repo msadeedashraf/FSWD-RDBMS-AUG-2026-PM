@@ -25,10 +25,18 @@ ON c.CustomerID = soh.CustomerID;
 -- a left outer join
 USE TSQL;
 GO
-SELECT c.custid, c.companyname, o.orderid, o.orderdate
-FROM Sales.Customers AS c
-LEFT OUTER JOIN Sales.Orders AS o
-ON c.custid =o.custid;
+select c.custid, c.companyname, o.orderid, o.orderdate
+from sales.orders as o
+right outer join  sales.customers as c
+on c.custid =o.custid
+where o.orderid is null ;
+
+
+
+select c.custid, c.companyname, o.orderid, o.orderdate
+from 
+ sales.orders as o right outer join sales.customers as c
+on c.custid =o.custid;
 
 -- Step 5: Join 2 tables
 -- Select and execute the following query to

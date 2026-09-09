@@ -9,6 +9,14 @@ GO
 -- to illustrate ANSI SQL-89 syntax
 -- to join 2 tables
 -- Point out that 830 rows are returned.
+
+select * from Sales.Customers AS c---91
+
+select * from Sales.Orders AS o --- 830
+
+
+
+
 SELECT c.companyname, o.orderdate
 FROM Sales.Customers AS c, Sales.Orders AS o
 WHERE c.custid = o.custid;
@@ -30,6 +38,10 @@ SELECT c.companyname, o.orderdate
 FROM Sales.Customers AS c JOIN Sales.Orders AS o
 ON c.custid = o.custid;
 
+SELECT c.companyname, o.orderdate
+FROM Sales.Customers AS c inner JOIN Sales.Orders AS o
+ON c.custid = o.custid;
+
 -- Step 5: Join 2 tables
 -- Select and execute the following query
 -- to illustrate ANSI SQL-92 syntax.
@@ -41,3 +53,11 @@ ON c.custid = o.custid;
 SELECT c.companyname, o.orderdate
 FROM Sales.Customers AS c JOIN Sales.Orders AS o;
 -- ON c.custid = o.custid
+
+--89
+SELECT c.companyname, o.orderdate
+FROM Sales.Customers AS c , Sales.Orders AS o;
+
+--92
+SELECT c.companyname, o.orderdate
+FROM Sales.Customers AS c cross join Sales.Orders AS o;

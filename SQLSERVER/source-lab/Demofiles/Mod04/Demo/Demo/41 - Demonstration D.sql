@@ -13,6 +13,14 @@ GO
   JOIN HR.Employees AS m
   ON e.mgrid=m.empid;
 
+
+  select * from hr.Employees as e join hr.Employees as m
+
+
+
+
+
+
 -- Step 3: Join 2 tables
 -- Select and execute the following query
 -- to display all employees 
@@ -22,6 +30,15 @@ GO
   LEFT OUTER JOIN HR.Employees AS m
   ON e.mgrid=m.empid;
   
+
+  SELECT e.empid ,e.lastname as empname,e.title,e.mgrid, m.lastname as mgrname
+  FROM HR.Employees AS e
+  LEFT OUTER JOIN HR.Employees AS m
+  ON e.mgrid=m.empid 
+  where m.empid is null ;
+  
+
+
 -- Step 4: Cross Join 2 tables
 -- Select and execute the following query
 -- to generate all combinations of first and last
