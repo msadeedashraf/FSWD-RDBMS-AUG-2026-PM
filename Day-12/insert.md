@@ -38,7 +38,18 @@ where year(hire_date) >= '1995'
 
 
 
-SELECT 
-  FROM [HR].[dbo].[employee_backup]
+SELECT e.* , (salary*1.10) as new_salary
+FROM [HR].[dbo].[employees] as e
+where department_id = 2
 
+select * into temp_new_salay_table
+FROM [HR].[dbo].[employees] as e
+where department_id = 2
 
+ --update 
+ select * from 
+ [HR].[dbo].[employees]  
+ --set salary = (salary*1.10)
+ where department_id = 2
+
+ drop table [dbo].[temp_new_salay_table]
